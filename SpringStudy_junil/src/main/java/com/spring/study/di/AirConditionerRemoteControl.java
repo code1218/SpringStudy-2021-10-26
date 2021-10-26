@@ -1,6 +1,11 @@
 package com.spring.study.di;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("c1")
 public class AirConditionerRemoteControl implements RemoteControl {
+	@Value("LG")
 	private String company;
 	
 	public String getCompany() {

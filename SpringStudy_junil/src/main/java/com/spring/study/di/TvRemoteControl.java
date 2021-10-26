@@ -1,5 +1,8 @@
 package com.spring.study.di;
 
+import org.springframework.stereotype.Component;
+
+@Component("c2")
 public class TvRemoteControl implements RemoteControl {
 	
 	private String company;
