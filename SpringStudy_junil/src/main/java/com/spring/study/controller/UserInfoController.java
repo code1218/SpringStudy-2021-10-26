@@ -16,7 +16,7 @@ public class UserInfoController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/insert-data", method = RequestMethod.POST)
+	@RequestMapping(value="/insert-data", method = RequestMethod.POST, produces = "text/html; charset=UTF-8")
 	@ResponseBody
 	public String insertData(	@RequestParam("user-id")String id, 
 								@RequestParam("user-password")String password, 
