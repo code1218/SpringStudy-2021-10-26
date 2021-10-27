@@ -21,11 +21,12 @@ public class Main {
 		centralControl.onAll();
 		centralControl.offAll();
 		*/
-		
+		/*
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/study/di/RemoteControlBeans.xml");
 		CentralControl centralControlDi = (CentralControl)context.getBean("centralControl");
 		centralControlDi.onAll();
 		centralControlDi.offAll();
+		*/
 	}
 
 }

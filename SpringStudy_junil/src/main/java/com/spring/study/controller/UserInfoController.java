@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.spring.study.model.UserInfoModel;
+
 @Controller
 public class UserInfoController {
 	
@@ -18,15 +20,15 @@ public class UserInfoController {
 	
 	@RequestMapping(value="/insert-data", method = RequestMethod.POST, produces = "text/html; charset=UTF-8")
 	@ResponseBody
-	public String insertData(	@RequestParam("user-id")String id, 
-								@RequestParam("user-password")String password, 
-								@RequestParam("user-name")String name,
-								@RequestParam("user-phone")String phone	) {
-		System.out.println(id);
-		System.out.println(password);
-		System.out.println(name);
-		System.out.println(phone);
-		return id + ", " + password + ", " + name + ", " + phone;
+	public String insertData(UserInfoModel userInfoModel) {
+		
+		System.out.println(userInfoModel.getUser_id());
+		System.out.println(userInfoModel.getUser_password());
+		System.out.println(userInfoModel.getUser_name());
+		System.out.println(userInfoModel.getUser_phone());
+		
+		return userInfoModel.getUser_id() + ", " + userInfoModel.getUser_password() + ", " + userInfoModel.getUser_name() + ", " + userInfoModel.getUser_phone();
+		
 	}
 	
 }

@@ -8,10 +8,10 @@
 </head>
 <body>
 	<form action="insert-data" method="post">
-		아이디: <input type="text" name="user-id"><br>
-		비밀번호: <input type="password" name="user-password"><br>
-		이름: <input type="text" name="user-name"><br>
-		연락처: <input type="tel" name="user-phone"><br>
+		아이디: <input type="text" name="user_id"><br>
+		비밀번호: <input type="password" name="user_password"><br>
+		이름: <input type="text" name="user_name"><br>
+		연락처: <input type="tel" name="user_phone"><br>
 		<input type="submit" value="전송">
 	</form>
 </body>
