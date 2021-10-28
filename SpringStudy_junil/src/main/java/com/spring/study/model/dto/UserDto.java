@@ -1,39 +1,39 @@
 package com.spring.study.model.dto;
 
 public class UserDto {
-	private String email;
-	private String password;
-	private String name;
-	private String phoneNumber;
-	
-	public String getEmail() {
-		return email;
+	private String user_email;
+	private String user_password;
+	private String user_name;
+	private String user_phone;
+	public String getUser_email() {
+		return user_email;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
 	}
-	public String getPassword() {
-		return password;
+	public String getUser_password() {
+		return user_password;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUser_password(String user_password) {
+		this.user_password = user_password;
 	}
-	public String getName() {
-		return name;
+	public String getUser_name() {
+		return user_name;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
 	}
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public String getUser_phone() {
+		return user_phone;
 	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setUser_phone(String user_phone) {
+		this.user_phone = user_phone;
 	}
-	
 	@Override
 	public String toString() {
-		return "UserDto [email=" + email + ", password=" + password + ", name=" + name + ", phoneNumber=" + phoneNumber
-				+ "]";
+		return "UserDto [user_email=" + user_email + ", user_password=" + user_password + ", user_name=" + user_name
+				+ ", user_phone=" + user_phone + "]";
 	}
+	
+	
 }

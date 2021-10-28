@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.spring.study.db.DBConnectionMgr;
@@ -11,6 +13,7 @@ import com.spring.study.model.dto.UserDto;
 
 @Repository
 public class UserDaoImpl implements UserDao {
+	/*
 	private DBConnectionMgr pool = null;
 	
 	public UserDaoImpl() {
@@ -46,6 +49,15 @@ public class UserDaoImpl implements UserDao {
 			pool.freeConnection(con, pstmt, rs);
 		}
 		return userDto;
+	}
+	*/
+	
+	@Autowired
+	private SqlSession session;
+	
+	@Override
+	public UserDto getUser(String email) {
+		return session.selectOne("com.spring.study.model.dao.UserDao.getUser", email);
 	}
 }
 
