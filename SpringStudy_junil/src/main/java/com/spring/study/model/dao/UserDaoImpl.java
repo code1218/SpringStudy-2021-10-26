@@ -71,6 +71,11 @@ public class UserDaoImpl implements UserDao {
 	public int idCheck(String user_email) {
 		return session.selectOne(NAME_SPACE + "idCheck", user_email);
 	}
+	
+	@Override
+	public int signUp(UserDto userdto) {
+		return session.insert(NAME_SPACE + "signUp", userdto);
+	}
 }
 
 
