@@ -59,6 +59,11 @@ public class UserDaoImpl implements UserDao {
 	public UserDto getUser(String email) {
 		return session.selectOne("com.spring.study.model.dao.UserDao.getUser", email);
 	}
+	
+	@Override
+	public int login(UserDto userDto) {
+		return session.selectOne("com.spring.study.model.dao.UserDao.login", userDto);
+	}
 }
 
 
