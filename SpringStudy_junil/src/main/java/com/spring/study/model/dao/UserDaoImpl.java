@@ -69,7 +69,7 @@ public class UserDaoImpl implements UserDao {
 	
 	@Override
 	public int idCheck(String user_email) {
-		return 0;
+		return session.selectOne(NAME_SPACE + "idCheck", user_email);
 	}
 }
 
