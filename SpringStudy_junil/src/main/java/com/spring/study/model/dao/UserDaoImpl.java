@@ -55,14 +55,21 @@ public class UserDaoImpl implements UserDao {
 	@Autowired
 	private SqlSession session;
 	
+	private static final String NAME_SPACE = "com.spring.study.model.dao.UserDao.";
+	
 	@Override
 	public UserDto getUser(String email) {
-		return session.selectOne("com.spring.study.model.dao.UserDao.getUser", email);
+		return session.selectOne(NAME_SPACE + "getUser", email);
 	}
 	
 	@Override
 	public int login(UserDto userDto) {
-		return session.selectOne("com.spring.study.model.dao.UserDao.login", userDto);
+		return session.selectOne(NAME_SPACE + "login", userDto);
+	}
+	
+	@Override
+	public int idCheck(String user_email) {
+		return 0;
 	}
 }
 
