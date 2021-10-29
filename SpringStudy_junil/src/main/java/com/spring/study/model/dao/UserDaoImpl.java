@@ -74,6 +74,7 @@ public class UserDaoImpl implements UserDao {
 	
 	@Override
 	public int signUp(UserDto userdto) {
+		System.out.println(userdto);
 		return session.insert(NAME_SPACE + "signUp", userdto);
 	}
 }
